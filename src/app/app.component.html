@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+
+<div class="slider" (click)="close();" 
+    [ngClass]="cardIsOpen ? 'cardOpen' : 'closed'">
+    <div class="card-content">
+      <h1>
+        <div id="{{cardSelected}}" >
+            {{cardSelected == 'cup' ? "&nbsp;" 
+            : cardSelected == 'endless' ? "&nbsp;" :cardSelected}}             
+        </div>
+      </h1>
+    </div>
+  </div>
+
+
+<main class="main">
+
+  <div id="about" class="cardDefault" hidden>
+    <h1>Bem-Vindo!</h1>
+    <p>O poker de planejamento, também chamado de poker Scrum, é uma técnica gamificada baseada em consenso para
+      estimar,
+      usada principalmente para estimar o esforço ou o tamanho relativo dos objetivos de desenvolvimento no
+      desenvolvimento de software.</p>
+  </div>
+
+  
+  <div class="containerCard">
+    <div class="row">
+      <div class="cards">
+        <div class="card" *ngFor="let item of list" 
+        [ngClass]="cardIsOpen ? 'cardClose' : ''" (click)="open(item);">
+          <div class="card-content">
+            <h1 id="{{item}}" >
+              {{item == 'cup' ? "&nbsp;" 
+              : item == 'endless' ? "&nbsp;" :item}}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
