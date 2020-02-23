@@ -1,5 +1,21 @@
 <header class="header">
     <h1>Poker Plan</h1>
     <button id="butInstall" aria-label="Install" (click)="addToHomeScreen()" *ngIf="showButton"></button>
+    <button id="help" aria-label="Help" (click)="btnHelp()"></button>
     <button id="butRefresh" aria-label="Refresh" hidden></button>
 </header>
+
+
+<div class="main" *ngIf="showHelp == true">
+    <div id="about" class="cardDefault" >
+        <p>
+            Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used to estimate effort or relative size of development goals in software development. 
+        </p>
+        <p>
+            In planning poker, members of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud. The cards are revealed, and the estimates are then discussed. By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.            
+        </p>
+        <p>
+            <cite><a href="https://github.com/rodrigoporcionato" target="_blank">Create by Porcionato :)</a></cite>
+        </p>
+    </div>    
+</div>

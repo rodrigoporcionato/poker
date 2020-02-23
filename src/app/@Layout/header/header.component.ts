@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  showHelp = false;
   deferredPrompt: any;
   showButton = false;
 
@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit {
     this.showButton = true;
   }
 
+  btnHelp() {
+    this.showHelp = this.showHelp? false: true;
+  }
+  
 
   addToHomeScreen() {
     // hide our user interface that shows our A2HS button

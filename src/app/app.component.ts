@@ -15,8 +15,7 @@ export class AppComponent {
   cardIsOpen: boolean;
 
   ngOnInit(): void {    
-  }
-
+  }  
   open(cardSelected) {
     this.cardIsOpen = true;
     this.cardSelected = cardSelected;
